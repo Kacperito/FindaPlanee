@@ -31,7 +31,7 @@ class AirplanesNearby : Fragment() {
 
         viewModel.all.observe(viewLifecycleOwner,{ view.findViewById<TextView>(R.id.textViewShowPlanes).text=it.toString()})
 
-        viewModel.postAll(45.8389,5.9962,47.8229,10.5226)
+        viewModel.postAll(49.6473,18.2199,50.9009,19.4166)
 
 
 
