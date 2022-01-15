@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.findaplane.menuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_airplanesNearby"
+            app:destination="@id/airplanesNearby" />
+    </fragment>
+    <fragment
+        android:id="@+id/airplanesNearby"
+        android:name="com.example.findaplane.AirplanesNearby"
+        android:label="fragment_airplanes_nearby"
+        tools:layout="@layout/fragment_airplanes_nearby" >
+        <action
+            android:id="@+id/action_airplanesNearby_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>
